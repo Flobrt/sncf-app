@@ -11,11 +11,18 @@ st.title("Destinations SNCF")
 
 @st.cache_data
 def load_stations():
-    return run_query("""
-        SELECT DISTINCT stop_name
-        FROM transport.gold.gtfs_gold
-        ORDER BY stop_name
-    """)["stop_name"].tolist()
+    try:
+        print("🔄 Chargement des stations...")
+        result = run_query("""
+            SELECT DISTINCT stop_name
+            FROM transport.gold.gtfs_gold
+            ORDER BY stop_name
+        """)
+        print(f"✅ {len(result)} stations chargées")
+        return result["stop_name"].tolist()
+    except Exception as e:
+        print(f"❌ Erreur load_stations : {e}")
+        return []
 
 
 # ─── Chargement des données selon les paramètres ─────────────────────────────
