@@ -129,8 +129,11 @@ if lancer:
     if df.empty:
         st.warning("Aucune destination trouvée pour ces paramètres.")
         st.stop()
+    
+    # Count distinct destinations
+    distinct_destinations = df["stop_name"].nunique()
 
-    st.success(f"{len(df)} destinations trouvées depuis **{gare_depart}**")
+    st.success(f"{distinct_destinations} destinations trouvées depuis **{gare_depart}**")
 
     # Gare de départ (point rouge)
     depart_df = pd.DataFrame([{
