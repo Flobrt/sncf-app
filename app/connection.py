@@ -9,9 +9,9 @@ load_dotenv()
 def get_connection():
     try:
         w = WorkspaceClient()
-        server_hostname = w.secrets.get("my_app_scope", "DATABRICKS_HOST").value
-        http_path       = w.secrets.get("my_app_scope", "DATABRICKS_HTTP").value
-        access_token    = w.secrets.get("my_app_scope", "DATABRICKS_TOKEN").value
+        server_hostname = w.secrets.get_secret(scope="my_app_scope", key="DATABRICKS_HOST").value
+        http_path       = w.secrets.get_secret(scope="my_app_scope", key="DATABRICKS_HTTP").value
+        access_token    = w.secrets.get_secret(scope="my_app_scope", key="DATABRICKS_TOKEN").value
         print("✅ Secrets Databricks chargés")
     except Exception as e:
         print(f"⚠️ Fallback .env : {e}")
