@@ -16,6 +16,7 @@ def load_stations():
         result = run_query("""
             SELECT DISTINCT stop_name
             FROM transport.gold.gtfs_gold
+            LIMIT 10000
             ORDER BY stop_name
         """)
         print(f"✅ {len(result)} stations chargées")

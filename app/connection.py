@@ -22,7 +22,8 @@ def get_connection():
     return sql.connect(
         server_hostname=server_hostname,
         http_path=http_path,
-        access_token=access_token
+        access_token=access_token,
+        _socket_timeout=120
     )
 
 def run_query(query: str):
