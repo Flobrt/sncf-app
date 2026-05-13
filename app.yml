@@ -1,18 +1,1 @@
 command: ["streamlit", "run", "app/main.py", "--server.port", "$DATABRICKS_APP_PORT", "--server.address", "0.0.0.0"]
-
-env:
-  - name: DATABRICKS_HOST
-    valueFrom:
-      secretRef:
-        scope: my_app_scope
-        key: DATABRICKS_HOST
-  - name: DATABRICKS_HTTP
-    valueFrom:
-      secretRef:
-        scope: my_app_scope
-        key: DATABRICKS_HTTP
-  - name: DATABRICKS_TOKEN
-    valueFrom:
-      secretRef:
-        scope: my_app_scope
-        key: DATABRICKS_TOKEN
