@@ -1,29 +1,14 @@
 import os
 from databricks import sql
-from databricks.sdk import WorkspaceClient
-from dotenv import load_dotenv
 import pandas as pd
+import streamlit as st
 
-import base64
-
-def get_secret(w, scope, key):
-    secret = w.secrets.get_secret(scope=scope, key=key)
-    value = secret.value
-    # Décoder si base64
-    try:
-        decoded = base64.b64decode(value).decode("utf-8")
-        return decoded
-    except Exception:
-        return value
-
-load_dotenv()
 
 def get_connection():
     try:
-        w = WorkspaceClient()
-        server_hostname = get_secret(w, "my_app_scope", "DATABRICKS_HOST")
-        http_path       = get_secret(w, "my_app_scope", "DATABRICKS_HTTP")
-        access_token    = get_secret(w, "my_app_scope", "DATABRICKS_TOKEN")
+        server_hostname = st.secrets["DATABRICKS_HOST"]
+        http_path       = st.secrets["DATABRICKS_HTTP"]
+        access_token    = st.secrets["DATABRICKS_TOKEN"]
         print("✅ Secrets Databricks chargés")
     except Exception as e:
         print(f"⚠️ Fallback .env : {e}")
