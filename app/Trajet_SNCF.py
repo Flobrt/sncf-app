@@ -39,8 +39,8 @@ def load_destinations(date, gare_depart, duree_max_h, train_types, heure_min, he
             FROM transport.gold.gtfs_gold
             WHERE date = '{date}'
             AND stop_name = '{gare_depart}'
-            CAST(departure_time AS STRING) >= '{heure_min}'
-            CAST(departure_time AS STRING) <= '{heure_max}'
+            AND CAST(departure_time AS STRING) >= '{heure_min}'
+            AND CAST(departure_time AS STRING) <= '{heure_max}'
             {train_filter}
         )
         SELECT DISTINCT
