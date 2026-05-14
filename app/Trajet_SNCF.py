@@ -232,7 +232,6 @@ if lancer:
         )
 
     with col_table:
-        st.subheader("Destinations")
         st.dataframe(
             # df[["stop_name", "depart_time", "arrival_time", "duree_min"]]
             df[["stop_name", "duree_min"]]
