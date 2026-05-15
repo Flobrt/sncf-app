@@ -3,7 +3,7 @@
 > Application de visualisation des données ferroviaires françaises et européennes    
 > Données issues d'un pipeline Databricks (architecture Médaillon Bronze → Silver → Gold)  
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dxsut6nczidnmagqj6vcy2.streamlit.app/)
-[![GitHub](https://img.shields.io/badge/GitHub-sncf--pipeline-black?logo=github)](https://github.com/Flobrt/sncf-pipeline) 
+[![GitHub](https://img.shields.io/badge/GitHub-sncf--pipeline-black?logo=github)](https://github.com/Flobrt/sncf_pipeline) 
 
 ---
 
