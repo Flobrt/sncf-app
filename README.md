@@ -1,9 +1,9 @@
 # SNCF Explorer
 
-> Application de visualisation des données ferroviaires françaises et européennes  
-> Données issues d'un pipeline Databricks (architecture Médaillon Bronze → Silver → Gold)
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dxsut6nczidnmagqj6vcy2.streamlit.app/)
-**[Pipeline de données](https://github.com/Flobrt/sncf-pipeline)**
+> Application de visualisation des données ferroviaires françaises et européennes    
+> Données issues d'un pipeline Databricks (architecture Médaillon Bronze → Silver → Gold)  
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dxsut6nczidnmagqj6vcy2.streamlit.app/)  
+**[Pipeline de données](https://github.com/Flobrt/sncf-pipeline)**  
 
 ---
 
