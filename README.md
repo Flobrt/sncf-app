@@ -35,10 +35,8 @@
 
 ## Aperçu
 
-<!-- 
 <img src="screenshots/destinations.png" width="700"/>
 <img src="screenshots/trains_nuit.png" width="700"/>
--->
 
 ---
 
