@@ -187,6 +187,13 @@ with st.sidebar:
     )
     lancer = st.button("Rechercher", use_container_width=True)
 
+    st.markdown("---")
+    st.markdown("**Florian Berthelot**")
+    st.markdown("""
+    [![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/in/florian-berthelot-ba2252173/)
+    [![GitHub](https://img.shields.io/badge/GitHub-black?logo=github)](https://github.com/Flobrt)
+    """)
+
 # ─── Lancement de la recherche ────────────────────────────────────────────────
 
 if lancer:
